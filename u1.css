@@ -1,12 +1,23 @@
-.inp-group{
-    display: inline;
+.inp{
+    position:relative;
+    
+    
 }
 
+.inp-group{
+   
+    display: inline;
+    text-align: center;
+}
 
+.l-group{
+    position: relative;
+    text-align: center;
+}
 
 form{
-    display: relative;
-    text-align: center;
+    display: absolute;
+    align-items: center;
 }
 
 input{
@@ -30,6 +41,9 @@ input{
     display: block;
     width: 100%;
     margin-top: 0;
+    }
+    label{
+        align-self: start;
     }
     
 }
