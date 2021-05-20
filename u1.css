@@ -1,19 +1,36 @@
-
-
-#ippassw{
-  
-    
-        
-}
 .inp-group{
-    
+    display: inline;
+}
+
+
+
+form{
     display: relative;
-    text-align: center; 
+    text-align: center;
 }
 
 input{
     display: absolute;
      margin-left: 1em;
      margin-right: 1em;
+}
+
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top:  6px;
+}
+.col-75{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+@media screen and (max-width: 600px) {
+    .inp-group{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    }
+    
 }
 
