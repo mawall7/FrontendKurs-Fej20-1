@@ -1,11 +1,19 @@
-#ipname{
-    
-  
-}
+
 
 #ippassw{
-    margin-left: 0.5%;
+  
+    
+        
 }
-.input-group{
-    display: block;
+.inp-group{
+    
+    display: relative;
+    text-align: center; 
 }
+
+input{
+    display: absolute;
+     margin-left: 1em;
+     margin-right: 1em;
+}
+
