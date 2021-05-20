@@ -13,13 +13,16 @@
    
 }
 form{
-    background-color:beige
+    background-color:beige;
+    border: solid 2px red;
+    border-radius: 5%;
 }
 .my-header{
     background-color: blue;
     height: 50px;
     padding:5px;
     color:white;
+    border: solid 1px black;
 }
 
 
