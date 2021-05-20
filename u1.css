@@ -7,26 +7,40 @@
 
 
 
-form{
-    display: absolute;
-    text-align: center;
+
+.flex-outer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: blue;
 }
 
-input{
-    display: absolute;
-     margin-left: 1em;
-     margin-right: 1em;
+ .flex-outer li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.flex-outer > li > label{
+    flex: 1 0 100px;
+    display: 1 0 220px;
+    max-width: 100px;
+} */
 
 
 
 @media screen and (max-width: 600px) {
-    form{
+     form{
     display: block;
     width: 100%;
     margin-top: 0;
     }
-    
+    .flex-container{
+        flex-direction: column;
+    }
+     
     
 }
 
