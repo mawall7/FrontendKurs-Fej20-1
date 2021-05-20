@@ -1,8 +1,3 @@
-.inp{
-    position:relative;
-    
-    
-}
 
 .inp-group{
    
@@ -10,14 +5,11 @@
     text-align: center;
 }
 
-.l-group{
-    position: relative;
-    text-align: center;
-}
+
 
 form{
     display: absolute;
-    align-items: center;
+    text-align: center;
 }
 
 input{
@@ -26,25 +18,15 @@ input{
      margin-right: 1em;
 }
 
-.col-25{
-    float: left;
-    width: 25%;
-    margin-top:  6px;
-}
-.col-75{
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
+
+
 @media screen and (max-width: 600px) {
-    .inp-group{
+    form{
     display: block;
     width: 100%;
     margin-top: 0;
     }
-    label{
-        align-self: start;
-    }
+    
     
 }
 
