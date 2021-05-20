@@ -3,8 +3,18 @@
    
     display: inline;
     text-align: center;
+    
 }
 
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+form{
+    background-color:beige
+}
 
 
 
@@ -27,7 +37,7 @@
     flex: 1 0 100px;
     display: 1 0 220px;
     max-width: 100px;
-} */
+} 
 
 
 
@@ -37,9 +47,21 @@
     width: 100%;
     margin-top: 0;
     }
-    .flex-container{
-        flex-direction: column;
+    .flex-outer{
+        display: flex;
+        align-items: start;
+    } 
+
+    .flex-outer li{
+        display: flex;
+        justify-content: left;
+       
+        justify-items:left;
     }
+    label{
+        display: block;
+    }
+    
      
     
 }
