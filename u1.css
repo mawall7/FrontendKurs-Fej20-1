@@ -1,4 +1,8 @@
 
+body{
+    margin-right:
+     0px;
+}
 .inp-group{
    
     display: inline;
@@ -12,11 +16,14 @@
     justify-content: center;
    
 }
+
 form{
-    background-color:beige;
+        
     border: solid 2px red;
     border-radius: 5%;
+    font-size: small;
 }
+
 .my-header{
     background-color: blue;
     height: 50px;
@@ -25,7 +32,10 @@ form{
     border: solid 1px black;
 }
 
-
+input{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 17px;
+}
 
 .flex-outer{
     display: flex;
