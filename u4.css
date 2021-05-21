@@ -1,5 +1,7 @@
 body{
     background-color: cadetblue;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 .mydiv{
@@ -25,6 +27,7 @@ body{
     width: 25px;
     background-color:white;
     border-radius: 50%;
+    opacity: 1;
     display: inline-block;
     animation-name: snow1;
     animation-duration: 5s;
@@ -36,4 +39,5 @@ body{
 @keyframes snow1{
     from{top: 0px;}
     to{top: 650px;}
+    
 }
