@@ -1,4 +1,8 @@
-div{
+body{
+    background-color: cadetblue;
+}
+
+.mydiv{
     width: 100px;
     height: 100px;
     background-color: red;
@@ -10,5 +14,16 @@ div{
 @keyframes example {
     from {background-color: red;}
     to {background-color: yellow;}
-    
-  }
+}
+
+.dot{
+    height: 25p;
+    width: 25px;
+    background-color:white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+canvas{
+    transform: rotate(0deg);
+}
