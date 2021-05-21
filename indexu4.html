@@ -8,26 +8,37 @@
     <link rel="stylesheet" href="u4.css">
 </head>
 <body>
-    <div class="mydiv"></div>
-
-    <div style="text-align: center;">
+    
+        
+    
+    <div id="parent" style="text-align: left;">
         <span class="dot">&nbsp</span>
         <span class="dot">&nbsp</span>
         <span class="dot">&nbsp</span>
         <span class="dot">&nbsp</span>   
     </div>
 
-    <canvas id="myCanvas" width="300" height="150"></canvas>
-    
+    <div id="thisdiv">
+        <canvas id="myCanvas" width="300" height="150" style></canvas>
+       
+    </div>
 
     <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.lineTo(50, 50);
-        ctx.lineWidth = 4;
-        ctx.stroke();
+        
+        let parent = document.getElementById("parent");
+        let child = parent.children[0];
+        child.style = "animation-delay:2s";
+        
+        let dgrs=0;
+                
+            
+          
+        let x = 0;
+        let c = null;
+        var ctx = null;
+
+     
+        
         </script>
 </body>
 </html>
