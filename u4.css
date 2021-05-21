@@ -16,14 +16,27 @@ body{
     to {background-color: yellow;}
 }
 
+
+
 .dot{
+    position: relative;
+    top: 0px;
     height: 25p;
     width: 25px;
     background-color:white;
     border-radius: 50%;
     display: inline-block;
+    animation-name: snow1;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    
 }
 
+@keyframes snow1{
+    from{top: 0px;}
+    to{top: 650px;}
+}
 canvas{
     transform: rotate(0deg);
 }
