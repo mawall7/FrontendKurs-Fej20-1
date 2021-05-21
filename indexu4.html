@@ -11,10 +11,43 @@
     
         
     
-    <div id="parent" style="text-align: left;">
+    <div id="parent" style="text-align: center;">
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>   
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>   
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>   
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;
+        <span class="dot">&nbsp</span>
+        
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;
+        <span class="dot">&nbsp</span>   
         <span class="dot">&nbsp</span>
         <span class="dot">&nbsp</span>
         <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;   
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>   
+        <span class="dot">&nbsp</span>&nbsp;
+        <span class="dot">&nbsp</span>
+        
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>
+        <span class="dot">&nbsp</span>&nbsp;
         <span class="dot">&nbsp</span>   
     </div>
 
@@ -24,27 +57,32 @@
     </div>
 
     <script>
-        let x;
-                
-        function rnd(){
-            let num = (Math.floor(Math.random() * 6) + 1).toString();
+
+      setInterval(setdurationforAll, 5000);
+    setdurationforAll();         
+        
+       function rnd(){
+            let num = (Math.floor(Math.random() * 10) + 1).toString();
             return num + "s";
         }
 
+       
+       function setdurationforAll()
+       {
         let parent = document.getElementById("parent");
         let child = parent.children[0];
-        child.style = "animation-duration:" + rnd();
-       
-        child = parent.children[1];
-        child.style = "animation-duration:" + rnd();
-        child = parent.children[2];
-        child.style = "animation-duration:" + rnd();
-        child = parent.children[3];
-        child.style = "animation-duration:" + rnd();
+        let x = -1;
+            while(x<50)
+            {
+                x+= 1;
+                child = parent.children[x];
+                child.style = "animation-duration:" + rnd();
         
-        
+            }
+       }
        
- 
+    
+       
         
      
         
