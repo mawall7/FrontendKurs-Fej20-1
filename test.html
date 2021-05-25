@@ -13,36 +13,111 @@
         .center{
          
         text-align: center;
-               
+             
+        }
+        img{
+            height:300px; 
+            width:500px;
+        }
+    }
 
+        @media screen and (max-width:500px){
+
+.center{
+ 
+    text-align: center;
+   
+    }
+}
+
+@media screen and (max-width:450px){
+
+    .center{
+    text-align:center;
+    margin: 0px;
+    }
+    
+    img{
+        width:400px;
+        height:250px;
+        }
+    
+    }
+    @media screen and (max-width:400px){
+
+.center{
+text-align:center;
+margin-left:0px;
+}
+
+img{
+    width:400px;
+    height:250px;
+    margin-left:-25px;
+    }
+
+}
+
+/* @media screen and (max-width:375px){
+
+    .center{
+    text-align:center;
+    
+    }
+    
+    img{
+        width:300px;
+        height:250px;
+       }
+    
+    } */
+
+        /* @media screen and (max-width:800px){
+
+        img{
+            margin-left:80px;
+            margin-right:300px;
         }
 
-        .center > .div{
 
-            
-    } 
-
-    
-
+        .center{
+ 
+        text-align: center;
+               
        
 }
 
-    
+@media screen and (max-width:650px){
+
+img{
+    margin-left:50px;
+    margin-right:300px;
+}
+
+
+.center{
+
+text-align: center;
+       
+
+}
+ */
 
         
     </style>  
 </head>
-<body>
+<body class= center>
     
-<div class="center" style=" border:3px solid olivedrab;background-color: beige; padding-top:2%; padding-bottom: 5%;">
+<div style=" border:3px solid olivedrab;background-color: beige; padding-top:2%; padding-bottom:5%">
         
     <div style="margin-left:25%;margin-right: 25%;width:auto; border: 3px solid green">
         <h1>This element</h1>
-        <h1>Secondelement</h1>
+        <h1>Second element</h1>
     </div>
-    <div style="border:1px double red; padding: 1%; margin-left: 25%; margin-right: 25%">
-          <img src="snogubbe.gif" style="height:300px; width:500px;border: 1px solid black">    
+    <div style="display:block; border:1px dotted red; position: relative; margin-left:auto;margin-right:auto">
+           
     </div>
+    <img src="snogubbe.gif" > 
     
 </div>
         
