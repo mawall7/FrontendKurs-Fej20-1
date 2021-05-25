@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+          }   
+
+    .column {
+        float: left;
+        width: 600px;
+        padding: 10px;
+        height: 500px; 
+        }
+    
+     .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    } 
+    </style>
+</head>
+<body>
+    <div class="row">
+
+        <div class="column" style="border-right: 2px solid black">
+            <img src="snogubbe.gif" style="margin-top:-70px;width:500px; height: 500px" >
+        </div>
+        <div class="column" style="margin-top:150px; text-align: center; margin-left: 4%;">
+            <p>Hej kolumn2</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
