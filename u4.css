@@ -15,10 +15,10 @@ body{
     animation-iteration-count: infinite;
 }
 
-@keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
+.responsive{
+    width:auto;
 }
+
 
 
 
@@ -46,8 +46,9 @@ body{
 
 img{
     height:200px;
-     width:200px;
-     position: absolute;
+    width:200px;
+    position: absolute;
+    
 }
 
 .testclass{
@@ -133,9 +134,10 @@ img{
  
     }
     
-       img{
+    *img{
         width:100px;
         height:100px;
+       
     }
 
     .flex-container{

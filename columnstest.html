@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        * {
+        *{
             box-sizing: border-box;
           }   
 
@@ -21,20 +22,156 @@
         content: "";
         display: table;
         clear: both;
-    } 
+    }
+    
+    
+
+    .mymargin{
+        margin-left: 200px;
+         }
+    .mymargin2{
+        margin-left:160px;
+    }
+   
+    .noinsert a{
+        text-decoration: none;
+        color: black;
+        margin-left: 20px;
+    }
+    span{
+        color: yellow;
+        
+    }
+    .underline, p{
+        text-decoration: underline black;
+    }
+
+    .inpfield{
+        display:block;
+    }
+   .btn{
+       font-size: 16px;
+       
+   }
+   .menu1{ 
+     position:fixed; 
+     bottom:360px;
+      left: 800px;
+   }
+   #form1{
+       border-top: 1px solid black; border-bottom: 1px solid black;
+   }
+   #favourites{
+       position: fixed;
+       overflow: scroll;
+       width:500px;
+       height:100px;
+       top:150px;
+       left: 620px;
+       display: inline-block;
+       
+   }
+
+   #favtext{
+       top:100px;
+       position:fixed;
+       border-bottom: 1px black solid;
+
+   }
     </style>
 </head>
 <body>
-    <div class="row" style="display: inline-flex;">
+    <div class="row">
 
         <div class="column" style="border-right: 2px solid black">
             <img src="snogubbe.gif" style="margin-top:-70px;width:500px; height: 500px" >
         </div>
-        <div class="column" style="margin-top:200px; text-align: center; margin-left: 4%;">
-            <p>Hej kolumn2</p>
+
+        <div class="column" style="margin-top:200px">
+            <span id="favtext">*favourites:</span><br><span id="favourites" style="margin-left: 1px;"></span>
+            <p style="text-align:center;">Hej kolumn2</p>
+         
+           
+            <br><br>
+            <form id="form1" class="mymargin2" >
+               
+                <ul id="list2">
+                    <li id="itemx1">
+                        <input type="checkbox" id="item1"value="item1" name="c1">
+                        <label for="" class="noinsert"><a href="asp-action">rekommenderade jobb1 &nbsp</a><span onmouseout="changeStar(this.id)" onmouseover="changeStar(this.id)" onclick="addfavourite(this.id)" id="toggle1" class=" fa fa-star"></span></label>
+                    </li>
+                    <li id="itemx2">
+                        <input type="checkbox" id="item2" value="item2" name="c2">
+                        <label for="" class="noinsert"><a href="asp-action">rekommenderade jobb2 &nbsp</a><span onmouseout="changeStar(this.id)" onmouseover="changeStar(this.id)" onclick="addfavourite(this.id)" id="toggle2" class=" fa fa-star"></span></label>
+                    </li>
+                    <li id="itemx3">
+                        <input type="checkbox" id="item3" value="item3" name="c3">
+                        <label for="" class="noinsert"><a href="asp-action">rekommenderade jobb3 &nbsp</a><span onmouseout="changeStar(this.id)" onmouseover="changeStar(this.id)" onclick="addfavourite(this.id)" id="toggle3" class=" fa fa-star"></span></label>
+                    </li>
+                </ul>
+                <button class="menu1" class=btn type="button" value="trash" onclick="deletePosts()"><span></span><i class="fa fa-trash"></i></button>
+                </span>
+            </form>
+
+           
         </div>
     </div>
+<script>
+     
+     
+      function changeStar(elementid){
+        let elem = document.getElementById(elementid);
+        
+        // let elem= document.getElementById("toggle");
+        elem.classList.toggle("fa-lg");
+        
+    }
 
+    function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+    
+    function deletePosts(){
+
+    
+      
+       var item1istrue = document.getElementById("item1");
+       var item2istrue = document.getElementById("item2");
+       var item3istrue = document.getElementById("item3");
+       
+       let c1; let cx1;
+       c1 = item1istrue? document.getElementById("item1"): null;
+       cx1 = item1istrue? document.getElementById("itemx1"): null;
+       if(item1istrue)
+       c1.checked? cx1.remove() :console.log(c1.checked);
+
+       c2 = item2istrue? document.getElementById("item2"): null;
+       cx2 = item2istrue? document.getElementById("itemx2"): null;
+       if(item2istrue)
+       c2.checked? cx2.remove() :console.log(c2.checked);
+       
+       c3 = item3istrue? document.getElementById("item3"): null;
+       cx3 = item3istrue? document.getElementById("itemx3"): null;
+       if(item3istrue)
+       c3.checked? cx3.remove():console.log(c3.checked);
+    }
+
+    function addfavourite(id){
+        let newfav = document.createElement("SPAN");
+        
+        
+        newfav.innerHTML = document.getElementById(id).previousSibling.innerHTML;
+        document.getElementById("favourites").appendChild(newfav);
+         
+        
+    }
+   
+
+    //     changeStar();       
+    // }
+</script>
     
 </body>
 </html>

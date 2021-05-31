@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       
       
     @media screen and (max-width:2000px){
 
+        .skrivstil{
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+        }
         .center{
          
         text-align: center;
@@ -58,6 +65,7 @@ img{
 
 }
 
+
 @media screen and (max-width:320px){
 
 .center{
@@ -71,6 +79,18 @@ img{
     margin-left:-45px;
     }
 
+}
+.row{
+    box-sizing: border-box;
+    
+}
+.column{
+    width:33%;
+    height:200px;
+    float: left;
+}
+.borderr{
+    border-right:4px solid gray;
 }
 /* @media screen and (max-width:375px){
 
@@ -120,7 +140,7 @@ text-align: center;
         
     </style>  
 </head>
-<body class= center>
+<body class="center">
     
 <div style=" border:3px solid olivedrab;background-color: beige; padding-top:2%; padding-bottom:5%">
         
@@ -134,7 +154,30 @@ text-align: center;
     <img src="snogubbe.gif" > 
     
 </div>
-        
+<br><hr><br>
+
+<div style="margin-left: 40%;">
+  
+    <div class="skrivstil" style="background-color:khaki; color: 1px solid black; width:fit-content;">
+        Hitta till oss!</div>
+    <br>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16294.01693278858!2d17.977383647120654!3d59.30369706686497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77a95b22aa69%3A0xc6c7e5b7a2cd5d4b!2sMcDonald&#39;s!5e0!3m2!1ssv!2sse!4v1622203682533!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<br>
+
+<hr>
+<div class="row">
+
+    <div class="column borderr" style="background-color: coral;">
+    <p>kolum1</p><p>Loremipsum</p></div>
+    <div class="column borderr" style="background-color: greenyellow">
+    <p>kontakt</p><p>Adress:</p><p>Brunnstensvägen 12</p><p>08-111111x</p>
+    </div>
+    <div class="column" style="background-color: darkcyan">
+    <p>credits: googlefontapis</p><p> Dancing Script cursive</p>
+    </div>
+
+</div>
    
 </body>
 </html>
