@@ -40,11 +40,25 @@
         .Text{
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             color:tomato;
+
         }
         .startdiv{
             background-color: silver;
-            opacity: 100%;
+            opacity: 10%;
         }
+
+        @keyframes opanimation{
+            from {opacity: 10%;}
+            to {opacity: 100%; }
+        }
+
+        .startdiv:hover{
+            animation-name:opanimation;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            
+        }
+        
     </style>
 </head>
 <body>
@@ -58,4 +72,7 @@
     </div>
 
 </body>
+<script>
+    
+</script>
 </html>
