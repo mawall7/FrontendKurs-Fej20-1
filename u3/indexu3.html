@@ -9,78 +9,165 @@
     <style>
         body{
             background-color: black;
+            box-sizing: border-box;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mazzy_Star.jpg/1280px-Mazzy_Star.jpg);
+            background-attachment:fixed;
+            background-size: cover;
+            
         }
         #im1{
             width:100%;
             height:100%;
-            position: relative;
+            position: absolute;
             z-index: -1;
-            }
+                        }
+        
+        .im2{
+           
+            max-width: 100px;
+            height: 100px;
+           
+        }
+        
         #link{
             color:white;
             font-size: 10px;
             position: absolute;
-            top:135%;
-            left: 95%;
-           
+            bottom:-1%;
+            right: 1%;
         }
         h1{
-            position: relative;
-            top:200%;
+           
             color:white;
             text-align: center;
             text-shadow: 0 0 3px blue;
         }
+
         h2{
             color:white;
-          }
-        .center{
             text-align: center;
-        }
+          }
+       
         .Text{
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             color:tomato;
 
         }
-        .startdiv{
-            background-color: silver;
-            opacity: 10%;
+        .position2{
+            position:absolute;
+            top: 300px;
+            
+        }
+        .div1{
+            margin-left:5%;
+            margin-right:5%;
+        }
+        .div2{
+            position: relative;
+            top: 20px;
+            width: 50%;
+            left:20%; 
         }
 
         @keyframes opanimation{
-            from {opacity: 10%;}
+            from {opacity: 0%;}
             to {opacity: 100%; }
         }
 
-        .startdiv:hover{
+        .startdiv{
+            background-color: silver;
+            opacity: 10%;
             animation-name:opanimation;
-            animation-duration: 3s;
+            animation-duration: 6s;
             animation-iteration-count: 1;
             
         }
-        
+     
+        #coords{
+            position: absolute;
+            top:0px;
+        }
+        aside{
+            width:30%;
+            float:right;
+            
+        }
+        .center{
+            margin-left: 28%;
+            margin-right: 28%;
+        }
+        .maintext{
+            position: relative;
+            margin-top: 40px;
+            width: 100%;
+        } 
     </style>
 </head>
-<body>
+<body onmousemove="showCoords(event)">
+    <h1 id="coords"></h1>
     <h1>Mazzy Star</h1>
-    <h2 class="h2 center">~ A tribute ~</h2>
-    
-    <img id="im1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mazzy_Star.jpg/1280px-Mazzy_Star.jpg" alt="">
+    <h2 class="h2">~ A tribute ~</h2>
+    <br>
+   
     <a id="link" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mazzy_Star.jpg/1280px-Mazzy_Star.jpg">&copyinfo</a>
-    <div id=div1 class="startdiv" onmouseover="resetOpacity()" onmouseout="lowOpacity()">
-        <div class="Text">Den här sidan är en tribute till bandet Mazzy Star, relativt okända i skandinavien, men, dessto mer i USA i alla fall i alternativ genren. Deras musik har ofta beskrivits som indie, men det är ju dock en ganska allmän beskrivning som inte ger någon helt klar uppfattning om den fulla repertoaren hos det här bandet låtar. Någon som lyssnat in sig på bandet skulle antagligen delvis beskriva musiken annorlunda. Även om bandets skivsläpp varit lite begränsat kan musiken ofta beskrivas som dröm-pop, i andra fall som alternativ-rock andra gånger som kanske psykedelisk-pop eller bara pop. En hit i USA var låten Fade Into You, vilken sålde platina. När låten var en hit, hade dock bandet redan släppt en tidagare skiva som fick bra respons och recensioner. Fast det här bandet har gjort så mycket mer! </div>
+    <div class="div1 Text startdiv" onload="resetOpacity()" >
+        Den här sidan är en tribute till det före detta bandet Mazzy Star, relativt okända i skandinavien, men, dessto mer i USA i alla fall inom alternativscenen. Deras musik har ofta beskrivits som indie, men det är ju dock en ganska allmän beskrivning som inte ger någon helt klar uppfattning om hela repertoaren hos det här bandet som finns inom skilda kategorier. Någon som lyssnat in sig på bandet skulle antagligen delvis beskriva musiken på flera sätt och inte bara "indie". Även om bandets skivsläpp varit lite begränsat, beskrivs deras musik förutom som indie, som dröm-pop, i andra fall som alternativ-rock andra gånger som country och ibland kanske som psykedelisk-pop eller bara pop. En hit i USA var låten Fade Into You, från andra abumet. När låten var en hit, hade dock bandet redan släppt en tidagare skiva som fick bra respons och recensioner. Fast det här bandet har gjort så mycket mer!
     </div>
+    
+   
+    <div class="Text center" style="color:white; width: 50%;">
+        <br>
+        <h1>Albumet Tonight I might See</h1>
+        
+            <p class="Text" style="float:left">Det här var gruppens andra album från 90 talet som nådde USA Bilboard listan. Låten är väligt nedtonad med finstämmig, Hopes ibland enstämmiga sång ger den en extra dimension till låtens text vilket gör att man kan leva sig in i låtens poetiska drömska vibe. 
+                Låten framfördes 1994 unplugged och även som originalversionen och unplugged blir låten ännu större än i original, aukustiskgitarr och bas som kommer in väldigt sent i framförandet bidrar på ett fint sätt till helheten.   
+            <img class="im2" ALIGN="right" HSPACE="20" VSPACE="20" src="https://upload.wikimedia.org/wikipedia/en/d/db/FadeIntoYou_Single_Cover.JPG" alt="">
+                Det här var gruppens andra album från 90 talet som nådde USA Bilboard listan. Låten är väligt nedtonad med finstämmig, Hopes ibland enstämmiga sång ger den en extra dimension till låtens text vilket gör att man kan leva sig in i låtens poetiska drömska vibe. 
+                Låten framfördes 1994 unplugged och även som originalversionen och unplugged blir låten ännu större än i original, aukustiskgitarr och bas som kommer in väldigt sent i framförandet bidrar på ett fint sätt till helheten.Det här var gruppens andra album från 90 talet som nådde USA Bilboard listan. Låten är väligt nedtonad med finstämmig, Hopes ibland enstämmiga sång ger den en extra dimension till låtens text vilket gör att man kan leva sig in i låtens poetiska drömska vibe. 
+                Låten framfördes 1994 unplugged och även som originalversionen och unplugged blir låten ännu större än i original, aukustiskgitarr och bas som kommer in väldigt sent i framförandet bidrar på ett fint sätt till helheten.
+            </p>
+    </div>
+     
+
+    
+    
+    <div class="center" style="clear:both; color:white;">
+        <br><br><p class="center">upptäck mer om bandets låtar! &RightArrow;</p>;
+        
+    </div>
+    
+    
+   
+  
+
+           
+        
+
+
+    <script>
+
+    function showCoords(event) {
+    let x = event.clientX;
+    let y = event.clientY;
+    let coords = "X coords: " + x + ", Y coords: " + y;
+    document.getElementById("coords").innerHTML = coords;
+    }
+
+        resetOpacity();
+    
+         function resetOpacity(){
+            let element = document.getElementsByClassName("startdiv")[0];
+            element.style.opacity= "100%" }
+    
+        function lowOpacity(){
+            let element2 = document.getElementsByClassName("startdiv")[0];
+            element2.style.opacity= "20%" }
+    
+            
+     
+    </script>
+
 
 </body>
-<script>
 
-     function resetOpacity(){
-        let element = document.getElementsByClassName("startdiv")[0];
-        element.style.opacity= "100%" }
-
-    function lowOpacity(){
-        let element2 = document.getElementsByClassName("startdiv")[0];
-        element2.style.opacity= "10%" }
- 
-</script>
 </html>
