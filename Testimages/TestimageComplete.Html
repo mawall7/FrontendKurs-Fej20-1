@@ -37,23 +37,43 @@
       
       
        
-      let imList=["http://www.adigitaldreamer.com/gallery/albums/userpics/10001/normal_sunset-clouds1~0.jpg", "https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_960_720.jpg","https://cdn.pixabay.com/photo/2018/04/20/01/32/lynx-3334869_960_720.jpg","https://cdn.pixabay.com/photo/2018/03/25/09/57/cute-3258931__340.jpg", "https://cdn.pixabay.com/photo/2016/01/20/13/28/woman-1151562__340.jpg","https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"];
-        
-      for(x of imList){
-          let imgl =document.createElement('img');
-          imgl.src = x;
+      var imList=["http://www.adigitaldreamer.com/gallery/albums/userpics/10001/normal_sunset-clouds1~0.jpg", "https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_960_720.jpg","https://cdn.pixabay.com/photo/2018/04/20/01/32/lynx-3334869_960_720.jpg","https://cdn.pixabay.com/photo/2018/03/25/09/57/cute-3258931__340.jpg", "https://cdn.pixabay.com/photo/2016/01/20/13/28/woman-1151562__340.jpg","https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"];
+    // function AllimgLoop(){
+    //   for(x of imList){
+    //       let imgl =document.createElement('img');
+    //       imgl.src = x;
          
-          imgl.style.height ="auto";
-          imgl.style.width = "100%";
+    //       imgl.style.height ="auto";
+    //       imgl.style.width = "100%";
           
-          document.getElementById('images').appendChild(imgl);
+    //       document.getElementById('images').appendChild(imgl);
       
-         }
+    //     }
+    // }
+
+    function AllimgLoop(){
+      for (let index = 0; index < imList.length; index++) {
+            
+            var x = imList[index];
+            
+            if(imgIscomplete(x)){
+                
+                let imgl =document.createElement('img');
+                imgl.src = x;
+                imgl.style.height ="auto";
+                imgl.style.width = "100%";
+                document.getElementById('images').appendChild(imgl);
+                }
+                else continue
+          }
+        }
+          
+          
          
          let d = document.getElementsByTagName("p")[0];
          let greeting = "greetings your'e awesome";
          let greetings =()=> {for (let index = 0; index < 10; index++) {
-                    d.innerHTML = greeting + d.innerHTML;
+         d.innerHTML = greeting + d.innerHTML;
          }};
 
          greetings();
@@ -61,17 +81,15 @@
 
         
         //loopthrough tills en bild hittas
-        // let imIsFound = false;
-        // for (let index = 0; index < imList.length; index++) {
-    
-        //     var im = document.querySelector('#im2');
-        //     document.getElementById("im2").src = imList[index];
-        //     imIsFound = im.complete && im.naturalHeight!== 0;  
-        //     if(imIsFound)
-        //     break;
-        //     }        
-
-      
+         function imgIscomplete(x){
+            let img1 =document.createElement('img');
+            img1.src = x;
+            
+            let imIsFound = false;
+            return img1.complete && img1.naturalHeight!== 0;  
+            }        
+        
+       AllimgLoop();
        
     </script>
 
