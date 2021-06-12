@@ -6,34 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .img1{
-                float:left;
-                position: relative;
-                left:-10%;
-            }
+        
         h1{
-            text-decoration: underline;
+          
+            color:burlywood;
+        }
+        #start{
+            text-align: center;
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif
         }
         
     </style>
 </head>
 <body>
-    <p><img class="img1" style="height:150px;width:150px; margin-left:150px" src="http://www.adigitaldreamer.com/gallery/albums/landscapes/thumb_fall-trees.jpg" alt="Bild på en snögubbe">
-    hej text text text textfdskafkdskafjkdjskfjkdsjafkjsdkjfaksjfkasd
-    fdsjfakjsakfjkdjfkjskfjksjkfjskdjfsa
-    fasfjksjfksjkfjkjfkjakjfdkjkfjkjskfjkdsjfkjskf
-    fskjfksjakjfdksasa
-    afkjskfjkjkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-    dkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-    dkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-    </p>
+    <h1 id="start">Här är lite exempel på gratisbilder från <a href="https://pixabay.com/sv/">pixabay</a>,
+         <a href="">unsplash.com</a> <br> och <a href="http://www.adigitaldreamer.com/gallery/">adigitaldreamer.com </a>som är fria att använda för kommersiellt bruk med lite olika kvalité.  
+         <br>
+            <a href=""></a>
+    </h1>
+    <p></p>
     <br>
-    <h1 id="start">start</h1>
-    <div style="clear: both; text-align: center;">
-        <img src="http://www.adigitaldreamer.com/gallery/albums/landscapes/thumb_fall-trees.jpg" alt="" style="width:100%; height:auto; image-rendering:crisp-edges">
-    </div>
-    <br>
-    <div style="clear: both; text-align: center;">
+    
+    <div id="images" style="clear: both; text-align: center;">
         <img id="im2" alt="" style="width:100%; height:auto;">
     </div>
     <a href="#start">linkstart</a>
@@ -41,29 +36,42 @@
     <script>     
       
       
-    //    im2.src = im2.src ==""?"snogubbecopy.gif":"http://www.adigitaldreamer.com/gallery/albums/landscapes/thumb_fall-trees.jpg";
-    //    im2.src = im2.src ==""?console.log("src is\"\""): console.log("src is not \"\""); 
        
-      let imList=["http://www.adigitaldreamer.com/gallery/albums/landscapes/thumb_fall-trees.jpg", "https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_960_720.jpg"];
+      let imList=["http://www.adigitaldreamer.com/gallery/albums/userpics/10001/normal_sunset-clouds1~0.jpg", "https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_960_720.jpg","https://cdn.pixabay.com/photo/2018/04/20/01/32/lynx-3334869_960_720.jpg","https://cdn.pixabay.com/photo/2018/03/25/09/57/cute-3258931__340.jpg", "https://cdn.pixabay.com/photo/2016/01/20/13/28/woman-1151562__340.jpg","https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"];
         
-        
-        
-        
-        let imIsFound = false;
-        for (let index = 0; index < imList.length; index++) {
-    
-            var im = document.querySelector('#im2');
-            document.getElementById("im2").src = imList[index];
-            imIsFound = im.complete && im.naturalHeight!== 0;  
-            if(imIsFound)
-            break;
-            }        
-
+      for(x of imList){
+          let imgl =document.createElement('img');
+          imgl.src = x;
+         
+          imgl.style.height ="auto";
+          imgl.style.width = "100%";
           
-    //    foreach(image in imList){
-       
-            // imIsFound == false?continue:null;
+          document.getElementById('images').appendChild(imgl);
+      
+         }
+         
+         let d = document.getElementsByTagName("p")[0];
+         let greeting = "greetings your'e awesome";
+         let greetings =()=> {for (let index = 0; index < 10; index++) {
+                    d.innerHTML = greeting + d.innerHTML;
+         }};
+
+         greetings();
+
+
+        
+        //loopthrough tills en bild hittas
+        // let imIsFound = false;
+        // for (let index = 0; index < imList.length; index++) {
     
+        //     var im = document.querySelector('#im2');
+        //     document.getElementById("im2").src = imList[index];
+        //     imIsFound = im.complete && im.naturalHeight!== 0;  
+        //     if(imIsFound)
+        //     break;
+        //     }        
+
+      
        
     </script>
 
