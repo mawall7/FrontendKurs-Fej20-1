@@ -29,15 +29,15 @@
     <br>
     
     <div id="images" style="clear: both; text-align: center;">
-        <img id="im2" alt="" style="width:100%; height:auto;">
-    </div>
+          </div>
     <a href="#start">linkstart</a>
 
     <script>     
       
-             
-    var imList=["http://www.adigitaldreamer.com/gallery/albums/userpics/10001/normal_sunset-clouds1~0.jpg", "https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_960_720.jpg","https://cdn.pixabay.com/photo/2018/04/20/01/32/lynx-3334869_960_720.jpg","https://cdn.pixabay.com/photo/2018/03/25/09/57/cute-3258931__340.jpg", "https://cdn.pixabay.com/photo/2016/01/20/13/28/woman-1151562__340.jpg","https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"];
-   
+      
+       
+      var imList=["http://www.adigitaldreamer.com/gallery/albums/userpics/10001/normal_sunset-clouds1~0.jpg", "https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897_960_720.jpg","https://cdn.pixabay.com/photo/2018/04/20/01/32/lynx-3334869_960_720.jpg","https://cdn.pixabay.com/photo/2018/03/25/09/57/cute-3258931__340.jpg", "https://cdn.pixabay.com/photo/2016/01/20/13/28/woman-1151562__340.jpg","https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"];
+  
 
     function AllimgLoop(){
       for (let index = 0; index < imList.length; index++) {
@@ -54,19 +54,35 @@
                 }
                 else continue
           }
+         
         }
           
+          
+         
+       
         
-        // Returnerar complete state som bool för ett bildelement x obs complete måste köras på imgelementet inte img src url
+        //returnerar complete state som bool för ett bild element x obs complete måste köras på imgelementet inte img src url
          function imgIscomplete(x){
             let img1 =document.createElement('img');
             img1.src = x;
             
             let imIsFound = false;
             return img1.complete && img1.naturalHeight!== 0;  
-            }        
+            }       
+            
+            AllimgLoop();
+        //refresh page bara en gång
+        window.onload = function() {
+	    if(!window.location.hash) {
+		    window.location = window.location + '#loaded';
+		    window.location.reload();
+	}
+}
         
-       AllimgLoop();
+         
+         
+                  
+        
        
     </script>
 
