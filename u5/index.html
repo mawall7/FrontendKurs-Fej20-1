@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <style>
 
         *{
@@ -64,21 +66,34 @@
         a{
             margin: 0px;
             padding: 0px;
-            color: rgb(9, 104, 104);
+           
         }
-
+        .roboto{
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+        .roboto2{
+            font-family: 'Roboto', sans-serif;
+             font-weight:bold;
+             color:black;
+             font-size: 14px;
+                   }
+        .arial{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         
     </style>
 </head>
 <body>
     <div class="row1" style="position:relative; right:100px">
     
-      <div class="col">
-          <a href="">Gmail</a>
-     </div>
-     <div class="col">
+      
+     <div class="col roboto2">
          <a href="">Bilder</a>
     </div>
+    <div class="col roboto2">
+        <a href="">Gmail</a>
+   </div>
    
   
     <div class="col" style="position: relative; top:-43px; left:250px">
@@ -88,14 +103,17 @@
                 <div class="abs dot2"><p class="dots">...</p></div>
                 <div class="abs dot3"><p class="dots">...</p></div>
             </a>
-        
-        
+       
     </div>
 
     <div class="col">
-        <canvas id="circlearea" style="position: relative; top:-65px; left:240px"></canvas>
+        <canvas id="circlearea" style="position: relative; top:-65px; left:240px"> </canvas>
     </div>
 </div>
+<div class="roboto" style="position: absolute; top:0px; right:31px; top:-7px; color:white">
+    <p>M</p>
+</div>
+
 <script>
     var canvas = document.getElementById('circlearea');
       var context = canvas.getContext('2d');
@@ -105,17 +123,10 @@
 
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = 'rgb(9, 104, 104)';
+      context.fillStyle = 'rgb(11, 107, 107)';
       context.fill();
-    //   context.lineWidth = 5;
-    //   context.strokeStyle = '#003300';
-    //   context.stroke();
-
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      ctx.beginPath();
-      ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-      ctx.stroke();
+   
+    
 </script>
 
     <!-- <span class="dotgroup">
