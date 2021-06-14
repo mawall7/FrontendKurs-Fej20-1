@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        *{
+            box-sizing: border-box;
+
+        }
+        .col{
+            width: 80px;
+            height: 50px;
+            float:right;
+        }
+        .row1:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+        a{
+           text-decoration: none;
+        }
+        .abs{
+            position: absolute;
+            
+        }
+        .dot1{
+            top: 0px;
+            
+        }
+        .dot2{
+            top: 6px;
+        }
+        .dot3{
+            top: 12px;
+        }
+        .dots{
+            font-size: 26px;
+            font-weight:bold;
+            letter-spacing: 0.1 px;
+            color:rgb(92, 90, 90);
+        }
+        /* .dotgroup{
+            /* left:150px; */
+            /* position: relative;
+            top:-44px; */
+        /* } */ 
+        /* .col1{
+            width: 10%;
+            
+        }
+        .col2{
+            width: 10%;
+        } */
+        .textgroup1{
+            position: relative;
+            right:60px;
+        }
+        a{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="row1" style="position:relative; right:100px">
+    
+      <div class="col">
+          <a href="">Gmail</a>
+     </div>
+     <div class="col">
+         <a href="">Bilder</a>
+    </div>
+   
+  
+    <div class="col" style="position: relative; top:-43px; left:250px">
+
+            <a href="https://sv.wikipedia.org/wiki/Portal:Huvudsida">
+                <div class="abs dot1"><p class="dots">...</p></div>
+                <div class="abs dot2"><p class="dots">...</p></div>
+                <div class="abs dot3"><p class="dots">...</p></div>
+            </a>
+        
+        
+    </div>
+
+    <div></div>
+</div>
+
+    <!-- <span class="dotgroup">
+        <a href="https://sv.wikipedia.org/wiki/Portal:Huvudsida">
+            <div class="abs dot1"><p class="dots">...</p></div>
+            <div class="abs dot2"><p class="dots">...</p></div>
+            <div class="abs dot3"><p class="dots">...</p></div>
+        </a>
+    </span> -->
+
+</body>
+</html>
