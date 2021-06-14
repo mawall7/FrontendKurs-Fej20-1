@@ -15,9 +15,10 @@
 
         }
         .col{
-            width: 80px;
+            width: 55px;
             height: 50px;
             float:right;
+            
         }
         .row1:after{
         content: "";
@@ -76,10 +77,13 @@
             font-family: 'Roboto', sans-serif;
              font-weight:bold;
              color:black;
-             font-size: 14px;
+             font-size: 13px;
                    }
         .arial{
             font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
         }
         
     </style>
@@ -87,16 +91,16 @@
 <body>
     <div class="row1" style="position:relative; right:100px">
     
-      
+        <div class="col roboto2">
+            <a href="">Gmail</a>
+        </div>
      <div class="col roboto2">
          <a href="">Bilder</a>
     </div>
-    <div class="col roboto2">
-        <a href="">Gmail</a>
-   </div>
    
+
   
-    <div class="col" style="position: relative; top:-43px; left:250px">
+    <div class="col" style="position: relative; top:-43px; left:180px">
 
             <a href="https://sv.wikipedia.org/wiki/Portal:Huvudsida">
                 <div class="abs dot1"><p class="dots">...</p></div>
@@ -107,12 +111,13 @@
     </div>
 
     <div class="col">
-        <canvas id="circlearea" style="position: relative; top:-65px; left:240px"> </canvas>
+        <canvas id="circlearea" style="position: relative; top:-65px; left:140px"> </canvas>
     </div>
 </div>
 <div class="roboto" style="position: absolute; top:0px; right:31px; top:-7px; color:white">
     <p>M</p>
 </div>
+<h1><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt=""></h1>
 
 <script>
     var canvas = document.getElementById('circlearea');
