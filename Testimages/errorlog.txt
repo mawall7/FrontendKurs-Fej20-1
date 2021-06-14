@@ -1,0 +1,14 @@
+-Problem med att ladda bilderna. behövde göra reload flera ggr.  
+möjliga oraker:
+
+1. fel i koden som inte upptäcks av debuggern.
+2. request timeout
+
+-fel i koden rättade, men felet finns kvar.
+-experimenterade med att sätta window.location.hash till #loaded
+och fungerade. 
+-> prövade att bara sätta en onerror eventhandler
+på img och göra location.reload() men, den gick in i en loop behöver nog göra en closure för 
+att få koden att bara köra en gång då. men, att göra en reload är ju inte riktigt det
+man vill då man vill ladda bilderna asynkront.  
+
